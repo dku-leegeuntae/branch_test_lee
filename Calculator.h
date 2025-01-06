@@ -27,6 +27,7 @@ public:
 
     // 예외 처리: 0으로 나누기를 방지
     class DivisionByZeroException : public std::exception {
+    public:     // 접근 제한자 변경 : public
         const char* what() const noexcept override {
             return "Error: Division by zero is not allowed!";
         }
